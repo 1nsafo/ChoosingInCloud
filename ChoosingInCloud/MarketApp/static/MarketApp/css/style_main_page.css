@@ -1,0 +1,322 @@
+body {
+    margin: 0; /* Убираем отступы */
+    display: flex; /* Используем flexbox для выравнивания */
+    flex-direction: column; /* Вертикальное расположение элементов */
+}
+
+.secup {
+    height: 100vh;
+    align-items: flex-start; /* Выравниваем кнопки по верхнему краю */
+    padding: 10px; /* Добавляем отступы */
+    background-image: url('../photo/cloudlast.png'); /* Указываем путь к изображению */
+    background-size: cover; /* Изображение будет покрывать весь фон */
+}
+
+.up {
+    display: flex; /* Используем flexbox для выравнивания элементов */
+    align-items: center; /* Выравниваем элементы по центру по вертикали */
+    padding: 10px; 
+    font-family: 'IBM+Plex+Mono', sans-serif;
+}
+
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.product-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    margin: 10px;
+    width: 200px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.product-image {
+    max-width: 100%;
+    height: auto;
+}
+
+.product-name {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.product-description {
+    font-size: 14px;
+    color: #666;
+}
+
+.product-price {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+}
+
+.headbut {
+    display: flex; /* Используем flexbox для кнопок */
+    margin-left: auto; /* Сдвигаем кнопки вправо */
+}
+
+.button-log-in {
+    background-color: transparent; /* Прозрачный фон */
+    border: 1px solid #ffffff; /* Белая рамка */
+    padding: 10px 20px;
+    color: lightgray;
+    border-radius: 20px; /* Закругление углов */
+    font-size: 24px;
+    margin-left: 10px; /* Отступ между кнопками */
+    font-family: 'IBM+Plex+Mono', sans-serif;
+}
+
+/* Стили для затемняющего фона */
+.overlay {
+    display: none; /* Скрыто по умолчанию */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Полупрозрачный черный фон */
+    z-index: 999; /* Поднимаем над другими элементами */
+}
+
+/* Стили для выплывающего окна */
+.popup {
+    display: none; /* Скрыто по умолчанию */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Центрируем окно */
+    background-color: #e9dbc2; /* Цвет фона */
+    border: 1px solid #ccc;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000; /* Над затемняющим фоном */
+    border-radius: 10px; /* Закругленные углы */
+}
+
+.popup h2{
+    color: rgba(21, 108, 139, 0.65);
+}
+
+/* Стили для формы */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-number {
+    margin-bottom: 10px;
+}
+
+input.phone-input {
+    width: 92%; /* Ширина поля ввода */
+    padding: 10px; /* Отступы внутри поля ввода */
+    border: 1px solid #ccc; /* Рамка поля ввода */
+    border-radius: 5px; /* Закругленные углы */
+}
+
+button.getcode {
+    padding: 10px;
+    background-color: rgba(41, 112, 138, 0.65); /* Цвет кнопки */
+    color: white; /* Цвет текста */
+    border: none; /* Без рамки */
+    border-radius: 5px; /* Закругленные углы */
+    cursor: pointer; /* Указатель при наведении */
+    font-size: 18px;
+}
+
+button.getcode:hover {
+    background-color: rgba(43, 121, 150, 0.65); /* Темнее при наведении */
+}
+
+.city {
+    text-align: left;
+    color: lightgray;
+    text-decoration: none; /* Убираем подчёркивание */
+    font-size: 24px; /* Увеличиваем размер шрифта */
+    font-family: 'IBM+Plex+Mono', sans-serif;
+}
+
+.title {
+    display: block;
+    text-align: center;
+}
+
+.nameproj{
+    font-size: 64px;
+    color: #29708A;
+    margin-top: 15%;
+    margin-bottom: 5px;
+}
+
+.authors{
+    font-size: 24px;
+    color: #29708A;
+    margin-top: 0;
+    margin-bottom: 60px;
+}
+
+.find-button {
+    text-align: center;
+    background-color: rgba(41, 112, 138, 0.65); /* Цвет фона кнопки */
+    color: white; /* Цвет текста кнопки */
+    font-weight: bold; /* Жирный шрифт */
+    border: 2px solid white; /* Белая рамка */
+    border-radius: 20px; /* Закругление углов */
+    padding: 10px 20px; /* Отступы внутри кнопки */
+    font-size: 36px; /* Размер шрифта */
+    cursor: pointer; /* Указатель при наведении */
+    margin-top: 50px; /* Увеличенный отступ сверху для кнопки */
+}
+
+
+.find-button:hover {
+    opacity: 0.9; /* Эффект при наведении */
+}
+
+.hat{
+    justify-content: center; /* Центрируем элементы */
+    background-color: #f3f3f3;
+    align-items: center;
+}
+
+.main{
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #e9dbc2;
+}
+
+.main_head {
+    display: flex;
+    justify-content: center; /* Центрируем элементы */
+    align-items: center;
+    padding: 20px;
+    margin-bottom: 20px;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+
+.buttons {
+    text-align: center;
+    display: flex;
+    gap: 150px;
+    margin-top: 10px;
+    cursor: pointer; /* Указатель при наведении */
+}
+
+.buttons:hover {
+    opacity: 0.9; /* Эффект при наведении */
+}
+
+.button_katalog {
+    padding: 10px 15px;
+    background-color: #29708A;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    width: 100px;
+    height: 100px;
+    font-size: 20px;
+}
+
+.button_heart{
+    padding: 10px 15px;
+    background-color: #29708A;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    height: 60px;
+    font-size: 20px;
+    background-color: transparent; /* Прозрачный фон */
+    border: none;
+    border-radius: 20px;
+    color: rgb(254, 152, 152);
+}
+.search-container {
+    padding: 10px;
+    margin-bottom: 20px;
+    height: 30px;
+    width: 500px;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    font-size: 20px;
+}
+.cards {
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 80px;
+}
+.card {
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 15px;
+    width: calc(25% - 20px); /* 4 карточки в строку */
+    height: 400px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+footer {
+    font-family: 'Inter', sans-serif; /* Применяем шрифт Inter */
+    font-weight: 300;
+    background: white; /* Белый фон */
+    display: flex; /* Используем flexbox для расположения элементов */
+    justify-content: space-between; /* Распределяем элементы по краям */
+    padding: 20px; /* Отступы внутри footer */
+}
+
+.footer-left, .footer-center, .footer-right {
+    display: flex;
+    margin-left: 5%;
+    flex-direction: column; /* Вертикальное расположение элементов */
+}
+
+.footer-left a, .footer-center a {
+    margin: 10px 0; /* Отступы между ссылками */
+    font-size: 15px;
+    font-weight: 300;
+    text-decoration: none;
+    color: gray; /* Серый цвет для ссылок */
+}
+
+.footer-left p:first-child, .footer-center p:first-child {
+    color: black; /* Чёрный цвет для первого элемента */
+    font-size: 20px;
+}
+
+.footer-right {
+    margin-right: 10%;
+}
+
+.footer-right p {
+    color: rgba(41, 112, 138, 0.65); /* Голубой цвет для правого параграфа */
+    font-size: 20px;
+}
+
+.social-icons {
+    margin-top: 10px; /* Отступ сверху */
+}
+
+.social-icons a {
+    margin-right: 15px; /* Отступ между иконками */
+    color: rgba(41, 112, 138, 0.65); /* Цвет иконок */
+    font-size: 24px; /* Размер иконок */
+    text-decoration: none; /* Убираем подчеркивание */
+}
+
+.social-icons a:hover {
+    color: rgb(52, 130, 240); /* Цвет при наведении */
+}
